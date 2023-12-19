@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+# Represents a snake in the game.
 class Snake
   SIZE = 20
 
@@ -9,18 +11,18 @@ class Snake
     @y = 0
     @tail = []
     @length = 1
-    @direction = "right"
+    @direction = 'right'
   end
 
   def move
-    @tail.unshift([@x, @y]) # move current position to head of tail.
-    @tail.pop if @tail.size == @length # Drop queue of tail unless recently grown
+    @tail.unshift([@x, @y])
+    @tail.pop if @tail.size == @length
 
     case @direction
-    when "right" then @x += SIZE
-    when "left" then @x -= SIZE
-    when "bottom" then @y += SIZE
-    when "top" then @y -= SIZE
+    when 'right' then @x += SIZE
+    when 'left' then @x -= SIZE
+    when 'bottom' then @y += SIZE
+    when 'top' then @y -= SIZE
     end
   end
 

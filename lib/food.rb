@@ -1,4 +1,5 @@
 # rubocop:disable Naming/MethodParameterName
+# Food element
 class Food
   attr_reader :x, :y
 
